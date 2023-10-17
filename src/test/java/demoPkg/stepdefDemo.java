@@ -12,7 +12,9 @@ import io.cucumber.java.en.Given;
 	import io.cucumber.java.en.Then;
 	import io.github.bonigarcia.wdm.WebDriverManager;
 	public class stepdefDemo {
-	public WebDriver driver;
+
+		
+		static WebDriver driver;
 		
 	@Given("user login the URL {string}")
 	public void user_login_the_url(String URL) {
@@ -32,7 +34,7 @@ import io.cucumber.java.en.Given;
 	
 	@Then("user click on Register button")
 	public void user_click_on_Register_button() {
-		driver.findElement(By.xpath("//*[@id=\"register-button\"]")).click();
+		driver.findElement(By.xpath("//*[@id='register-button']")).click();
 	}
 
 	@Then("user enter details {string} and {string} and {string} and {string} and {string}")
@@ -59,12 +61,11 @@ import io.cucumber.java.en.Given;
 		{
 			System.out.println("Not working as expected");
 		}
-	}		
-	
-	@After
-	public void tearDown() {
+		
 		driver.close();
 		System.out.println("Browser Closed ");
-	}
+	}		
+	
+	
 
 }
