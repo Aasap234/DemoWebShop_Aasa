@@ -59,12 +59,11 @@ import io.cucumber.java.en.Given;
 		{
 			System.out.println("Not working as expected");
 		}
-	}		
-	
-	@After
-	public void tearDown() {
+		
 		driver.close();
 		System.out.println("Browser Closed ");
-	}
+	}		
+	
+	
 
 }
